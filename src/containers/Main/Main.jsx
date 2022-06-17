@@ -13,12 +13,12 @@ const Main = () => {
         setMessage(quote)
     }, [quote])
 
-    const getQuote = () => {
-        if (Math.random() > 0.5) {
-            setQuote("This is a placeholder quote");
-        } else {
-            setQuote("I am a placeholder quote");
-        }
+    const getQuote = async () => {
+        let url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
+        let request = await fetch(url);
+        let fetchResult = await request.json();
+        console.log(fetchResult);
+        // setQuote(fetchResult);
     }
 
     const encryptInput = () => {
@@ -29,16 +29,16 @@ const Main = () => {
         setMessage(event.target.value);
     }
 
-    let inputBoxElement = (<InputBox placeholder={"Type your message here..."} onChange={updateMessage} />)
-    if (quote) {
-        inputBoxElement = (<InputBox value={message} placeholder={"Type your message here..."} onChange={updateMessage} />)
-    }
+    // let inputBoxElement = (<InputBox placeholder={"Type your message here..."} onChange={updateMessage} />)
+    // if (quote) {
+    //     inputBoxElement = (<InputBox value={message} placeholder={"Type your message here..."} onChange={updateMessage} />)
+    // }
 
     return (
     <div className="main">
         <h1 className="main__title">Title</h1>
         <Button name={"Get Quote"} onClick={getQuote} />
-        {inputBoxElement}
+        <InputBox value={message} placeholder={"Type your message here..."} onChange={updateMessage} />
         <Button name={"Encrypt"} onClick={encryptInput} />
         <DropDown />
         <p className="main__output">Output field</p>
