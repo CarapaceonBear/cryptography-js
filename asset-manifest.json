@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cryptography-js/tree/develop/static/css/main.f43348a3.css",
+    "main.js": "/cryptography-js/tree/develop/static/js/main.d4bab4fd.js",
+    "static/js/787.51f43e55.chunk.js": "/cryptography-js/tree/develop/static/js/787.51f43e55.chunk.js",
+    "index.html": "/cryptography-js/tree/develop/index.html",
+    "main.f43348a3.css.map": "/cryptography-js/tree/develop/static/css/main.f43348a3.css.map",
+    "main.d4bab4fd.js.map": "/cryptography-js/tree/develop/static/js/main.d4bab4fd.js.map",
+    "787.51f43e55.chunk.js.map": "/cryptography-js/tree/develop/static/js/787.51f43e55.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f43348a3.css",
+    "static/js/main.d4bab4fd.js"
+  ]
+}
