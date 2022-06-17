@@ -2,9 +2,9 @@ import React from "react";
 import "./InputBox.scss";
 
 
-const InputBox = () => {
+const InputBox = ({value, placeholder, onChange}) => {
   return (
-    <div>InputBox</div>
+    <input type="text" placeholder={placeholder} onChange={onChange}/>
   )
 }
 

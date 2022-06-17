@@ -14,11 +14,15 @@ const Main = () => {
         console.log("I want to encrypt the message");
     }
 
+    const updateMessage = (event) => {
+        console.log(event.target.value);
+    }
+
     return (
     <div>
         <h1>Title</h1>
         <Button name={"Get Quote"} onClick={getQuote} />
-        <InputBox />
+        <InputBox placeholder={"Type your message here..."} onChange={updateMessage} />
         <Button name={"Encrypt"} onClick={encryptInput} />
         <DropDown />
         <p>Output field</p>
