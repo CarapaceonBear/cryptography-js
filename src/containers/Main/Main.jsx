@@ -14,11 +14,11 @@ const Main = () => {
     }, [quote])
 
     const getQuote = async () => {
-        let url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
+        let url = "https://type.fit/api/quotes";
         let request = await fetch(url);
         let fetchResult = await request.json();
-        console.log(fetchResult);
-        // setQuote(fetchResult);
+        const retrievedQuote = fetchResult[Math.floor(Math.random() * fetchResult.length)]
+        setQuote(retrievedQuote.text);
     }
 
     const encryptInput = () => {

@@ -40,5 +40,5 @@
     "gh-pages": "^4.0.0",
     "sass": "^1.52.3"
   },
-  "homepage": "http://carapaceonbear.github.io/cryptography-js/tree/develop"
+  "homepage": "http://carapaceonbear.github.io/cryptography-js/"
 }
