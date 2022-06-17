@@ -4,7 +4,7 @@ import "./InputBox.scss";
 
 const InputBox = ({value, placeholder, onChange}) => {
   return (
-    <input type="text" placeholder={placeholder} onChange={onChange}/>
+    <input type="text" placeholder={placeholder} onChange={onChange} value={value} />
   )
 }
 
